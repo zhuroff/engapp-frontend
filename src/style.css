@@ -1,0 +1,116 @@
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.App .table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.App .table thead {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  box-shadow: 0 8px 6px -6px var(--surface-200);
+}
+
+.App .table thead th {
+  padding: 0.75rem 0;
+}
+
+.App .table tbody td {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid var(--surface-100);
+  overflow: hidden;
+}
+
+.App .table tbody td:first-of-type {
+  padding: 0.5rem 0;
+}
+
+.App .table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.App .table tbody tr:hover {
+  background-color: var(--surface-100);
+  transition: background-color 0.2s ease;
+}
+
+.App .table tfoot td {
+  padding: 1rem 0;
+}
+
+body .p-dialog .p-inputtextarea {
+  width: 100%;
+}
+
+.App .p-inputtextarea,
+.App .p-inputtext,
+body .p-dialog,
+body .p-confirm-popup,
+body .p-button:not(.p-button-rounded) {
+  border-radius: 3px !important;
+}
+
+body .p-confirm-popup .p-confirm-popup-content {
+  padding: 1rem;
+}
+
+body .p-confirm-popup .p-confirm-popup-footer {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card-title .p-button-icon-only {
+  opacity: 0;
+}
+
+.card-title .p-inputtext+.p-button-icon-only,
+.card-title:hover .p-button-icon-only {
+  opacity: 1;
+}
+
+.collection>hr {
+  margin: 1.5rem 0;
+}
+
+.collection__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  list-style-type: none;
+  gap: 0.5rem;
+}
+
+.collection__list-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.collection__list-item:hover .p-card {
+  background-color: var(--surface-50);
+}
+
+.collection__list-item .p-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  opacity: 0;
+}
+
+.collection__list-item .p-button+.p-button {
+  right: 0.25rem;
+}
+
+.collection__list-item:hover .p-button {
+  opacity: 1
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
