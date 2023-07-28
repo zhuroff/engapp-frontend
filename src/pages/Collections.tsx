@@ -1,6 +1,6 @@
 import { useLocale } from '../hooks/useLocale'
 
 export const Collections = () => {
-  const { text } = useLocale()
-  return <h1>{text('routes.collections')}</h1>
+  const { localize } = useLocale()
+  return <h1>{localize('routes.collections')}</h1>
 }

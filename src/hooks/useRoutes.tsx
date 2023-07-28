@@ -9,17 +9,17 @@ import { Collection } from '../pages/Collection'
 import { Category } from '../pages/Category'
 
 export const useRoutes = () => {
-  const { currentLocale, text } = useLocale()
+  const { currentLocale, localize } = useLocale()
   const routeList: RouteItem[] = [
     {
       path: '/',
       element: <Dashboard />,
-      title: text('routes.dashboard')
+      title: localize('routes.dashboard')
     },
     {
       path: '/categories',
       element: <Categories />,
-      title: text('routes.categories')
+      title: localize('routes.categories')
     },
     {
       path: '/categories/:id',
@@ -28,7 +28,7 @@ export const useRoutes = () => {
     {
       path: '/collections',
       element: <Collections />,
-      title: text('routes.collections')
+      title: localize('routes.collections')
     },
     {
       path: '/collections/:id',

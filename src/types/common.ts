@@ -1,4 +1,6 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
+
+export type LocaleCodes = 'ru' | 'en'
 
 export interface RouteItem {
   path: string
