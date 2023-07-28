@@ -6,24 +6,22 @@ import { LangPairsProvider } from './hooks/useLangPairs';
 import { ToastProvider } from './hooks/useToast';
 import { useLayoutSwitcher } from './hooks/useLayoutSwitcher';
 import './style.css';
+import { LayoutAuthorized } from './layouts/LayoutAuthorized';
+import { RoutesAuthorized } from './routes/RoutesAuthorized';
+import { BrowserRouter } from 'react-router-dom';
 
 export const App = () => {
-  const { layoutParams } = useLayoutSwitcher()
-  const { currentCollection } = useLayoutSwitcher()
+  // const { layoutParams } = useLayoutSwitcher()
+  // const { currentCollection } = useLayoutSwitcher()
 
   return (
-    <div
-      className="App"
-      style={{
-        padding: '1rem',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        display: 'grid',
-        gap: '1rem'
-      }}>
+    <BrowserRouter>
       <LangPairsProvider value={null}>
         <ToastProvider position={'bottom-right'}>
-          <NavBar />
+          <LayoutAuthorized>
+            <RoutesAuthorized />
+          </LayoutAuthorized>
+          {/* <NavBar />
           {layoutParams.createSection.isActive &&
             <NewCollectionForm />
           }
@@ -32,9 +30,9 @@ export const App = () => {
           }
           {currentCollection &&
             <SingleCollection />
-          }
+          } */}
         </ToastProvider>
       </LangPairsProvider>
-    </div>
+    </BrowserRouter>
   );
 }
