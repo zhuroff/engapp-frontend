@@ -24,7 +24,7 @@ const appGrid = css`
   display: grid;
   height: 100vh;
   overflow: hidden;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 230px 1fr;
   grid-template-rows: 60px 1fr;
 
   aside {

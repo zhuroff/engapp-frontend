@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { jsx, css } from '@emotion/react'
 import { useMemo } from 'react'
 // import { useLocale } from '../hooks/useLocale'
 import { useRoutes } from '../hooks/useRoutes'
@@ -18,7 +20,7 @@ export const Sidebar = () => {
   ), [routes])
 
   return (
-    <aside>
+    <aside css={sidebarCSS}>
       <nav>
         <ul>
           {
@@ -29,18 +31,33 @@ export const Sidebar = () => {
             ))
           }
         </ul>
-        {
-          Object.entries(localeMessages[currentLocale].languages)
-            .map(([langKey, langCode]) => (
-              <div key={langKey}>
-                <Button
-                  label={langCode}
-                  onClick={() => setCurrentLocale(langKey as LocaleCodes)}
-                />
-              </div>
-            ))
-        }
       </nav>
+      {/* {
+        Object.entries(localeMessages[currentLocale].languages)
+          .map(([langKey, langCode]) => (
+            <div key={langKey}>
+              <Button
+                label={langCode}
+                onClick={() => setCurrentLocale(langKey as LocaleCodes)}
+              />
+            </div>
+          ))
+      } */}
     </aside>
   )
 }
+
+const sidebarCSS = css`
+  padding: 1rem;
+  text-align: center;
+
+  ul {
+    li {
+      a {
+        padding: 0.25rem 0;
+        font-size: 1rem;
+        display: block;
+      }
+    }
+  }
+`
