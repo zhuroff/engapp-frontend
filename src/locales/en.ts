@@ -1,7 +1,7 @@
 export const messages = {
   error: 'Error',
   routes: {
-    dashboard: 'Dashoard',
+    dashboard: 'Dashboard',
     categories: 'Categories',
     collections: 'Collections'
   }
