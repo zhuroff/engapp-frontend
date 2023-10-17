@@ -13,14 +13,14 @@ a {
   text-decoration: none;
 }
 
-.App .table {
+.section .table {
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
   color: var(--text-color);
 }
 
-.App .table thead {
+.section .table thead {
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -28,30 +28,30 @@ a {
   box-shadow: 0 8px 6px -6px var(--surface-200);
 }
 
-.App .table thead th {
+.section .table thead th {
   padding: 0.75rem 0;
 }
 
-.App .table tbody td {
+.section .table tbody td {
   padding: 0.5rem 0.25rem;
   border-bottom: 1px solid var(--surface-100);
   overflow: hidden;
 }
 
-.App .table tbody td:first-of-type {
+.section .table tbody td:first-of-type {
   padding: 0.5rem 0;
 }
 
-.App .table tbody tr {
+.section .table tbody tr {
   transition: background-color 0.2s ease;
 }
 
-.App .table tbody tr:hover {
+.section .table tbody tr:hover {
   background-color: var(--surface-100);
   transition: background-color 0.2s ease;
 }
 
-.App .table tfoot td {
+.section .table tfoot td {
   padding: 1rem 0;
 }
 
@@ -59,8 +59,8 @@ body .p-dialog .p-inputtextarea {
   width: 100%;
 }
 
-.App .p-inputtextarea,
-.App .p-inputtext,
+.section .p-inputtextarea,
+.section .p-inputtext,
 body .p-dialog,
 body .p-confirm-popup,
 body .p-button:not(.p-button-rounded) {
